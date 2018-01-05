@@ -20,17 +20,17 @@ Here are some visulizations of the dataset:
 #### train,validation,test set distribution
 We have 67% of training set, 9% of validation set and 24% of test set.
 As the dataset is large, we don't need too much validation set. Otherwise, more validation set shall be needed to prevent overfitting.
-![data_ratio](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/report_images/data_ratio.jpg)
+![data_ratio](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/data_ratio.jpg)
 #### unique label data distribution
 Here I plot the data number versus unique label for each dataset. 
 This is important because we want the train, validation and test sets to have similar distribution from all different unique labels.<br>
 Otherwise, if data distrubutions are very different for these data set, it will  either affect the training performance or the test performance.
-![unique_label_distribution](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/report_images/unique_label_distribution.jpg)
+![unique_label_distribution](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/unique_label_distribution.jpg)
 As shown above, our data set have similar distributions for unique labels, which is good.
 
 #### examples of stop signs data
 Below are random examples from each unique label stop sign data.
 There are 43 different types of stop signs.
-![stopsign_examples](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/report_images/stopsign_examples.jpg)
+![stopsign_examples](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/stopsign_examples.jpg)
 
 
