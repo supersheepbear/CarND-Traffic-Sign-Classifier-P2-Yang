@@ -294,50 +294,50 @@ Futher improvement can be made by:
 ```
 
 
-label0  recall:0.8833 precision:0.8983
-label1  recall:0.9875 precision:0.9556
-label2  recall:0.9733 precision:0.9505
-label3  recall:0.9044 precision:0.9532
-label4  recall:0.9652 precision:0.9830
-label5  recall:0.9413 precision:0.9095
-label6  recall:0.9400 precision:0.9463
-label7  recall:0.9222 precision:0.9857
-label8  recall:0.9911 precision:0.9272
-label9  recall:1.0000 precision:0.9677
-label10  recall:0.9894 precision:0.9969
-label11  recall:0.9357 precision:0.9269
-label12  recall:0.9870 precision:0.9913
-label13  recall:0.9944 precision:0.9958
-label14  recall:1.0000 precision:0.8882
-label15  recall:0.9905 precision:0.9952
-label16  recall:1.0000 precision:1.0000
-label17  recall:0.9361 precision:0.9825
-label18  recall:0.8641 precision:0.9656
-label19  recall:0.9667 precision:0.9831
-label20  recall:1.0000 precision:0.9574
-label21  recall:0.7222 precision:0.8904
-label22  recall:0.9000 precision:1.0000
-label23  recall:0.9933 precision:0.8514
-label24  recall:0.8778 precision:0.8681
-label25  recall:0.9875 precision:0.9151
-label26  recall:0.9778 precision:0.9462
-label27  recall:0.5667 precision:0.7556
-label28  recall:0.9800 precision:0.9735
-label29  recall:0.9111 precision:0.8723
-label30  recall:0.7400 precision:0.7551
-label31  recall:0.9926 precision:0.9926
-label32  recall:1.0000 precision:0.9836
-label33  recall:0.9810 precision:0.9810
-label34  recall:1.0000 precision:0.9836
-label35  recall:0.9590 precision:0.9973
-label36  recall:0.9750 precision:0.9590
-label37  recall:0.9500 precision:0.9500
-label38  recall:0.9536 precision:0.9821
-label39  recall:0.9556 precision:0.9053
-label40  recall:0.8889 precision:0.8989
-label41  recall:0.8000 precision:0.9796
-label42  recall:0.8889 precision:0.9877
-```
+label1  recall:0.8833 precision:0.8983
+label2  recall:0.9875 precision:0.9556
+label3  recall:0.9733 precision:0.9505
+label4  recall:0.9044 precision:0.9532
+label5  recall:0.9652 precision:0.9830
+label6  recall:0.9413 precision:0.9095
+label7  recall:0.9400 precision:0.9463
+label8  recall:0.9222 precision:0.9857
+label9  recall:0.9911 precision:0.9272
+label10  recall:1.0000 precision:0.9677
+label11  recall:0.9894 precision:0.9969
+label12  recall:0.9357 precision:0.9269
+label13  recall:0.9870 precision:0.9913
+label14  recall:0.9944 precision:0.9958
+label15  recall:1.0000 precision:0.8882
+label16  recall:0.9905 precision:0.9952
+label17  recall:1.0000 precision:1.0000
+label18  recall:0.9361 precision:0.9825
+label19  recall:0.8641 precision:0.9656
+label20  recall:0.9667 precision:0.9831
+label21  recall:1.0000 precision:0.9574
+label22  recall:0.7222 precision:0.8904
+label23  recall:0.9000 precision:1.0000
+label24  recall:0.9933 precision:0.8514
+label25  recall:0.8778 precision:0.8681
+label26  recall:0.9875 precision:0.9151
+label27  recall:0.9778 precision:0.9462
+label28  recall:0.5667 precision:0.7556
+label29  recall:0.9800 precision:0.9735
+label30  recall:0.9111 precision:0.8723
+label31  recall:0.7400 precision:0.7551
+label32  recall:0.9926 precision:0.9926
+label33  recall:1.0000 precision:0.9836
+label34  recall:0.9810 precision:0.9810
+label35  recall:1.0000 precision:0.9836
+label36  recall:0.9590 precision:0.9973
+label37  recall:0.9750 precision:0.9590
+label38  recall:0.9500 precision:0.9500
+label39  recall:0.9536 precision:0.9821
+label40  recall:0.9556 precision:0.9053
+label41  recall:0.8889 precision:0.8989
+label42  recall:0.8000 precision:0.9796
+label43  recall:0.8889 precision:0.9877
+``
 
 # 4. Test a Model on New Images
 
