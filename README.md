@@ -277,11 +277,11 @@ The final model is saved to '.\lenet_final'
 
  ![final_model.jpg](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/final_model.jpg)
 Here are some of my answers for the questions:<br>
-What architecture was chosen?<br>
-Lenet 5 with an incetion layer. 
-Why did you believe it would be relevant to the traffic sign application?
+**What architecture was chosen?**<br>
+Lenet 5 with an incetion layer. <br>
+**Why did you believe it would be relevant to the traffic sign application?**<br>
 Because it has good effect on the classification for numbers, I believe it shall has similar performance for stop signs, since they are both multiclass classification problem.<br>
-How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+**How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?**<br>
 The training, validation of more than 98% indicates that the model works well on th training part, and it's not overfitting/underfitting. The 95.7% one test set shows that it works well on out of sample prediction. However, further improvement can be included to get it better. 
 ## 3.4  evaluation of the test set
 Our model accuracy on the test set is 95.7%.
