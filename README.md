@@ -447,15 +447,15 @@ Take an example of the following input image:
  ![Visualize_raw.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/Visualize_raw.png)
  
  Below are some visulizations of the layers output:<br>
- conv1:
-  ![conv1.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/conv1.png)
- conv1_act:
-  ![conv1_act.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/conv1_act.png)
- conv1_pool:
-  ![conv1_pool_act.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/conv1_pool_act.png)
- conv2:
-  ![conv2.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/conv2.png)
- conv2_act:
-  ![conv2_act.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/conv2_act.png)
- inception:
-  ![inception_visual.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/inception_visual.png)
+ conv1:<br>
+  ![conv1.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/conv1.png)<br>
+ conv1_act:<br>
+  ![conv1_act.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/conv1_act.png)<br>
+ conv1_pool:<br>
+  ![conv1_act_pool.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/conv1_act_pool.png)<br>
+ conv2:<br>
+  ![conv2.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/conv2.png)<br>
+ conv2_act:<br>
+  ![conv2_act.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/conv2_act.png)<br>
+ inception:<br>
+  ![inception_visual.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/inception_visual.png)<br>
