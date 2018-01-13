@@ -139,7 +139,7 @@ For the inception layer, here is the achitecture:
 | Convolution#2  		| 1x1 stride, valid padding, outputs 10x10x16   |
 | RELU#2				|           									|
 | Max pooling#2	      	| 2x2 stride, valid padding, outputs 5x5x16  	|
-| inception	      	| 1x1,3x3,5x5, averagepool(same pad), outputs 5x5x31  	|						|    									|
+| inception	      	    |  maxpool(same pad), outputs 5x5x31        	|					
 | Flatten#2				| outputs: 400    								|
 | Full Connection#0		| outputs:120	       |
 | Full Connection#1		| output: 84									|
