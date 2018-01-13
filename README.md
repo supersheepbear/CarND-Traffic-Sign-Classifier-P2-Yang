@@ -167,8 +167,6 @@ For this baseline training I use:
 - layers: original Lenet
 - regularizations: no<br>
 <br>
-see below for the baseline performance.
-![baseline.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/baseline.png)
 
 **problem 1: It seems like the batch size too small affect the stability**<br>
 **problem 2: learning rate and other hyper parameters can be tuned to be better***<br>
@@ -288,15 +286,21 @@ The final model performance is shown in the following figure.
 The final model is saved to '.\lenet_final'
 
  ![final_model.jpg](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/final_model.jpg)
- 
+Here are some of my answers for the questions:<br>
+What architecture was chosen?<br>
+Lenet 5 with an incetion layer. 
+Why did you believe it would be relevant to the traffic sign application?
+Because it has good effect on the classification for numbers, I believe it shall has similar performance for stop signs, since they are both multiclass classification problem.<br>
+How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+The training, validation of more than 98% indicates that the model works well on th training part, and it's not overfitting/underfitting. The 95.7% one test set shows that it works well on out of sample prediction. However, further improvement can be included to get it better. 
 ## 3.4  evaluation of the test set
 Our model accuracy on the test set is 95.7%.
 Futher improvement can be made by:
-- adding more validation set, training set
+- adding more diversified validation set, training set
 - improve model achitecture
 - better tuning hyperparameters
 - better training process<br>
-**Below are the precision and recall for the model, which may give us infomation about where to improve out model.**
+**Below are the precision and recall for the model, which may give us infomation about which label performance needs to improve for my model.**
 ```
 
 
@@ -433,18 +437,18 @@ Top probability is label 18, which is predicted as:General caution
 --------------------------------------------------------------------------------
 ```
 It seems that model is very certain about image number 1,2,4,5,6,7, but is not very certain about image 3 and 8.<br>
-Let's visulize what it is confused with.<br>
+Let's visualize what it is confused with for test3.jpg:<br>
 
  ![confused_image_1.jpg](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/confused_image_1.jpg)
  
-Well, I don't understand why model is confused about these two images... But the model has its reason. <br>Fortunally it recognized correctly.<br>
+Well, I think I don't understand why model is confused about these two images... But the model has its reason. <br>
 For test8.jpg, here is the visulization of the confused image:
  ![confused_image_2.jpg](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/confused_image_2.jpg)
  
-For test8.jpg, this is understandable. The confused labe image looks really similar to the true lable image, even for human beings.<br>
+For test8.jpg, this is understandable. The confused labe image looks really similar to the true lable image. It's hard even for human beings.<br>
 ### Compare the performance on the new images to the accuracy results of the test set.
 For the test set we have 95.7% accuracy, while for new images we have 100% accuracy.<br>
-Well this comparison is actually not fare because we have too little amount of images for the new images.<br>
+This comparison is actually not fare because we have too little amount of images for the new images.<br>
 I think if I increase the number of new images, the comparison will make more sense.
 
 
@@ -458,12 +462,10 @@ Take an example of the following input image:
  conv1_act:
   ![conv1_act.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/conv1_act.png)
  conv1_pool:
-  ![conv1_pool.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/conv1_pool.png)
+  ![conv1_pool_act.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/conv1_pool_act.png)
  conv2:
   ![conv2.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/conv2.png)
  conv2_act:
   ![conv2_act.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/conv2_act.png)
- conv2_pool:
-  ![conv2_pool.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/conv2_pool.png)
  inception:
   ![inception_visual.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/inception_visual.png)
