@@ -11797,7 +11797,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -12746,7 +12746,7 @@ aug training set: validation set: testing set = 0.92 : 0.02 : 0.06
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[717]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#training_file_aug = &#39;train_aug.p&#39;</span>
@@ -12782,7 +12782,7 @@ aug training set: validation set: testing set = 0.92 : 0.02 : 0.06
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">cv2</span>
@@ -12825,7 +12825,7 @@ aug training set: validation set: testing set = 0.92 : 0.02 : 0.06
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[718]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;/cpu:0&#39;</span><span class="p">):</span>
@@ -12909,7 +12909,7 @@ norm images shape is : (208794, 32, 32)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[719]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;/cpu:0&#39;</span><span class="p">):</span>
@@ -12953,7 +12953,7 @@ norm images shape is : (208794, 32, 32)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[720]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;/cpu:0&#39;</span><span class="p">):</span>
@@ -13003,7 +13003,7 @@ sets imply underfitting. A high accuracy on the training set but low accuracy on
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">tensorflow.python.ops</span> <span class="k">import</span> <span class="n">control_flow_ops</span>
@@ -13047,7 +13047,7 @@ Here is what a inception layer looks like:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">inception2d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">filter_count</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">sigma</span><span class="p">):</span>
@@ -13094,7 +13094,7 @@ Basically what I use is the original LeNet achitecture, plus an incetion layer i
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">tensorflow.contrib.layers</span> <span class="k">import</span> <span class="n">flatten</span>
@@ -13179,7 +13179,7 @@ Basically what I use is the original LeNet achitecture, plus an incetion layer i
     <span class="n">fc2_act</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">fc2_act</span><span class="p">,</span> <span class="n">keep_prob</span><span class="o">=</span> <span class="n">dropprob</span><span class="p">)</span>
 
     
-    <span class="c1"># Layer 5: Fully Connected. Input = 84. Output = 10.</span>
+    <span class="c1"># Layer 5: Fully Connected. Input = 84. Output = 43.</span>
     <span class="n">fc3_w</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal</span><span class="p">(</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">84</span><span class="p">,</span><span class="mi">43</span><span class="p">),</span><span class="n">mean</span> <span class="o">=</span> <span class="n">mu</span><span class="p">,</span> <span class="n">stddev</span><span class="o">=</span><span class="n">sigma</span><span class="p">))</span>
     <span class="n">fc3_b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">43</span><span class="p">))</span>
     <span class="n">logits</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">fc2_act</span><span class="p">,</span><span class="n">fc3_w</span><span class="p">),</span><span class="n">fc3_b</span><span class="p">)</span>
@@ -13204,7 +13204,7 @@ Basically what I use is the original LeNet achitecture, plus an incetion layer i
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[712]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
@@ -13341,7 +13341,7 @@ Basically what I use is the original LeNet achitecture, plus an incetion layer i
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">draw_acc</span><span class="p">(</span><span class="n">train_accuracies</span><span class="p">,</span><span class="n">validation_accuracies</span><span class="p">,</span><span class="n">loss_list</span><span class="p">,</span><span class="n">EPOCHS</span><span class="p">,</span><span class="n">title_1</span><span class="p">,</span><span class="n">title_2</span><span class="p">):</span>
@@ -13386,7 +13386,7 @@ Basically what I use is the original LeNet achitecture, plus an incetion layer i
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">empty_train_result</span><span class="p">():</span>
@@ -15413,7 +15413,7 @@ Futher improvement can be made by:</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[555]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">evaluate</span><span class="p">(</span><span class="n">X_data</span><span class="p">,</span> <span class="n">y_data</span><span class="p">,</span> <span class="n">rate</span><span class="p">):</span>
@@ -15443,10 +15443,14 @@ Futher improvement can be made by:</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[501]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">reset_default_graph</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">batchnorm</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">incept</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">regu_beta</span><span class="o">=</span> <span class="mi">0</span>
+<span class="n">BATCH_SIZE</span> <span class="o">=</span> <span class="mi">1024</span>
+<span class="n">tf</span><span class="o">.</span><span class="n">reset_default_graph</span><span class="p">()</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="p">(</span><span class="kc">None</span><span class="p">))</span>
 
@@ -15905,7 +15909,7 @@ label42  recall:0.8889 precision:0.9877
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[196]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">jpg_image_to_array</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
@@ -15922,7 +15926,7 @@ label42  recall:0.8889 precision:0.9877
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[288]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="k">import</span> <span class="n">Image</span>
@@ -15944,7 +15948,7 @@ label42  recall:0.8889 precision:0.9877
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[289]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_test_new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">X_test_new</span><span class="p">)</span>
@@ -15961,7 +15965,7 @@ label42  recall:0.8889 precision:0.9877
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[289]:</div>
+<div class="prompt output_prompt">Out[47]:</div>
 
 
 
@@ -15987,7 +15991,7 @@ label42  recall:0.8889 precision:0.9877
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[294]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_test_new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">27</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">38</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">18</span><span class="p">])</span>
@@ -16004,7 +16008,7 @@ label42  recall:0.8889 precision:0.9877
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[294]:</div>
+<div class="prompt output_prompt">Out[48]:</div>
 
 
 
@@ -16030,14 +16034,14 @@ label42  recall:0.8889 precision:0.9877
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[295]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">test_new</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">test_new</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">],</span> <span class="n">test_new</span><span class="p">[</span><span class="s1">&#39;labels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_test_new</span><span class="p">,</span> <span class="n">y_test_new</span>
 
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;test_new.p&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
-    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">train_aug</span><span class="p">,</span> <span class="n">handle</span><span class="p">,</span> <span class="n">protocol</span><span class="o">=</span><span class="n">pickle</span><span class="o">.</span><span class="n">HIGHEST_PROTOCOL</span><span class="p">)</span>
+    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">test_new</span><span class="p">,</span> <span class="n">handle</span><span class="p">,</span> <span class="n">protocol</span><span class="o">=</span><span class="n">pickle</span><span class="o">.</span><span class="n">HIGHEST_PROTOCOL</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -16056,7 +16060,7 @@ label42  recall:0.8889 precision:0.9877
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[308]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_test_new</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
@@ -16072,7 +16076,7 @@ label42  recall:0.8889 precision:0.9877
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[308]:</div>
+<div class="prompt output_prompt">Out[51]:</div>
 
 
 
@@ -16097,7 +16101,7 @@ label42  recall:0.8889 precision:0.9877
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[320]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_test_new_gray</span> <span class="o">=</span> <span class="n">grayscale</span><span class="p">(</span><span class="n">X_test_new</span><span class="p">)</span>
@@ -16116,7 +16120,7 @@ label42  recall:0.8889 precision:0.9877
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[320]:</div>
+<div class="prompt output_prompt">Out[59]:</div>
 
 
 
@@ -16141,7 +16145,7 @@ label42  recall:0.8889 precision:0.9877
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[356]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">signnames</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;signnames.csv&#39;</span><span class="p">)</span>
@@ -16158,7 +16162,7 @@ label42  recall:0.8889 precision:0.9877
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[356]:</div>
+<div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -16497,11 +16501,65 @@ a = np.array([[ 0.24879643,  0.07032244,  0.12641572,  0.34763842,  0.07893497,
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[400]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load pickled data</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+
+<span class="n">testing_file</span> <span class="o">=</span> <span class="s1">&#39;test_new.p&#39;</span>
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;/cpu:0&#39;</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">testing_file</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">test_new</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+    <span class="n">X_test_new</span><span class="p">,</span> <span class="n">y_test_new</span> <span class="o">=</span> <span class="n">test_new</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">],</span> <span class="n">test_new</span><span class="p">[</span><span class="s1">&#39;labels&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_test_new</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[58]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(8, 32, 32, 3)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">top_prob</span><span class="p">(</span><span class="n">X_data</span><span class="p">,</span><span class="n">y_data</span><span class="p">):</span>
-    <span class="n">topprob_operation</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">top_k</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">topprob_operation</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">top_k</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span><span class="n">dim</span> <span class="o">=</span> <span class="mi">1</span><span class="p">),</span><span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
     <span class="n">rate</span> <span class="o">=</span> <span class="mf">0.001</span>
     <span class="n">topprobs</span><span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">topprob_operation</span><span class="p">,</span> <span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">cons_soft_holder</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">X_data</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">y_data</span><span class="p">,</span><span class="n">dropprob_holder</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span><span class="n">is_training</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span><span class="n">rate_holder</span><span class="p">:</span><span class="n">rate</span><span class="p">})</span>
     <span class="k">return</span> <span class="n">topprobs</span>
@@ -16514,7 +16572,7 @@ a = np.array([[ 0.24879643,  0.07032244,  0.12641572,  0.34763842,  0.07893497,
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[442]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
@@ -16523,7 +16581,7 @@ a = np.array([[ 0.24879643,  0.07032244,  0.12641572,  0.34763842,  0.07893497,
     <span class="n">topprobs</span> <span class="o">=</span> <span class="n">top_prob</span><span class="p">(</span><span class="n">X_test_new_input</span><span class="p">,</span> <span class="n">y_test_new</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;top 5 Softmax Probabilities for test</span><span class="si">{}</span><span class="s1">.jpg:&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;probabilities:</span><span class="si">{:.3f}</span><span class="s1"> | </span><span class="si">{:.3f}</span><span class="s1"> | </span><span class="si">{:.3f}</span><span class="s1"> | </span><span class="si">{:.3f}</span><span class="s1"> | </span><span class="si">{:.3f}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">topprobs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">num</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">topprobs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">num</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">topprobs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">num</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span><span class="n">topprobs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">num</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span><span class="n">topprobs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">num</span><span class="p">][</span><span class="mi">4</span><span class="p">]))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;probabilities:</span><span class="si">{:.3f}</span><span class="s1">%| </span><span class="si">{:.3f}</span><span class="s1">%| </span><span class="si">{:.3f}</span><span class="s1">%| </span><span class="si">{:.3f}</span><span class="s1">%| </span><span class="si">{:.3f}</span><span class="s1">%</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">topprobs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">num</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="n">topprobs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">num</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="n">topprobs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">num</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="n">topprobs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">num</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="n">topprobs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">num</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
         <span class="n">labels</span> <span class="o">=</span> <span class="n">topprobs</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">num</span><span class="p">]</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;predict label: </span><span class="si">{:2d}</span><span class="s1">    |  </span><span class="si">{:2d}</span><span class="s1">    |  </span><span class="si">{:2d}</span><span class="s1">    |  </span><span class="si">{:2d}</span><span class="s1">    |  </span><span class="si">{:2d}</span><span class="s1">    </span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">labels</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">labels</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">labels</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">labels</span><span class="p">[</span><span class="mi">4</span><span class="p">]))</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Top probability is label </span><span class="si">{}</span><span class="s1">, which is predicted as:</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">signnames</span><span class="p">[</span><span class="s1">&#39;SignName&#39;</span><span class="p">][</span><span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="p">))</span>
@@ -16546,56 +16604,56 @@ a = np.array([[ 0.24879643,  0.07032244,  0.12641572,  0.34763842,  0.07893497,
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>INFO:tensorflow:Restoring parameters from .\lenet_final
 top 5 Softmax Probabilities for test1.jpg:
-probabilities:95.008 | 70.116 | 68.233 | 58.279 | 40.288
+probabilities:100.000%| 0.000%| 0.000%| 0.000%| 0.000%
 
 predict label:  1    |   0    |   2    |   4    |   3    
 
 Top probability is label 1, which is predicted as:Speed limit (30km/h)
 --------------------------------------------------------------------------------
 top 5 Softmax Probabilities for test2.jpg:
-probabilities:76.475 | 62.935 | 56.542 | 54.258 | 52.051
+probabilities:100.000%| 0.000%| 0.000%| 0.000%| 0.000%
 
 predict label: 27    |  11    |  30    |  25    |  21    
 
 Top probability is label 27, which is predicted as:Pedestrians
 --------------------------------------------------------------------------------
 top 5 Softmax Probabilities for test3.jpg:
-probabilities:39.476 | 37.008 | 35.916 | 26.224 | 22.053
+probabilities:89.835%| 7.610%| 2.554%| 0.000%| 0.000%
 
 predict label: 40    |   7    |  12    |   1    |  39    
 
 Top probability is label 40, which is predicted as:Roundabout mandatory
 --------------------------------------------------------------------------------
 top 5 Softmax Probabilities for test4.jpg:
-probabilities:117.771 | 97.103 | 66.227 | 51.615 | 49.600
+probabilities:100.000%| 0.000%| 0.000%| 0.000%| 0.000%
 
 predict label: 11    |  30    |  27    |  37    |  21    
 
 Top probability is label 11, which is predicted as:Right-of-way at the next intersection
 --------------------------------------------------------------------------------
 top 5 Softmax Probabilities for test5.jpg:
-probabilities:225.522 | 113.338 | 108.304 | 107.948 | 105.992
+probabilities:100.000%| 0.000%| 0.000%| 0.000%| 0.000%
 
-predict label: 25    |  20    |  28    |  18    |  22    
+predict label: 25    |   0    |   1    |   2    |   3    
 
 Top probability is label 25, which is predicted as:Road work
 --------------------------------------------------------------------------------
 top 5 Softmax Probabilities for test6.jpg:
-probabilities:235.531 | 115.659 | 107.046 | 106.958 | 99.750
+probabilities:100.000%| 0.000%| 0.000%| 0.000%| 0.000%
 
-predict label: 38    |  34    |  12    |  13    |  10    
+predict label: 38    |   0    |   1    |   2    |   3    
 
 Top probability is label 38, which is predicted as:Keep right
 --------------------------------------------------------------------------------
 top 5 Softmax Probabilities for test7.jpg:
-probabilities:110.727 | 77.177 | 68.362 | 66.750 | 51.072
+probabilities:100.000%| 0.000%| 0.000%| 0.000%| 0.000%
 
 predict label: 17    |  38    |  12    |  39    |  34    
 
 Top probability is label 17, which is predicted as:No entry
 --------------------------------------------------------------------------------
 top 5 Softmax Probabilities for test8.jpg:
-probabilities:43.625 | 39.750 | 32.196 | 32.076 | 28.563
+probabilities:97.964%| 2.034%| 0.001%| 0.001%| 0.000%
 
 predict label: 18    |  26    |  27    |  24    |  25    
 
@@ -16613,9 +16671,8 @@ Top probability is label 18, which is predicted as:General caution
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It seems that model is very certain about image number 1,2,4,5,6,7, but is not very certain about image 3 and 8.<br>
-Let's visulize what it is confused with.<br>
-For test3.jpg:</p>
+<p>It seems that model is very certain about all the images..
+For image3:</p>
 
 </div>
 </div>
@@ -16675,8 +16732,7 @@ For test3.jpg:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Well, I don't understand why model is confused about these two images... But the model has its reason. <br>Fortunally it recognized correctly.<br><br></strong>
-<strong>Now, For test8.jpg:</strong></p>
+<p><strong> For test8.jpg:</strong></p>
 
 </div>
 </div>
@@ -16736,7 +16792,7 @@ For test3.jpg:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>For test8.jpg, this is understandable. The confused labe image looks really similar to the true lable image, even for human beings.</strong></p>
+<p>The confused labe image looks similar to the true lable image</p>
 
 </div>
 </div>

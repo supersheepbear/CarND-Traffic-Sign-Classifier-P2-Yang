@@ -370,72 +370,71 @@ the images I choose is not hard for model (and for human beings) to classify.  I
 Here I output top 5 softmax probabilities for each image found on the web:
 ```
 top 5 Softmax Probabilities for test1.jpg:
-probabilities:95.008 | 70.116 | 68.233 | 58.279 | 40.288
+probabilities:100.000%| 0.000%| 0.000%| 0.000%| 0.000%
 
 predict label:  1    |   0    |   2    |   4    |   3    
 
 Top probability is label 1, which is predicted as:Speed limit (30km/h)
 --------------------------------------------------------------------------------
 top 5 Softmax Probabilities for test2.jpg:
-probabilities:76.475 | 62.935 | 56.542 | 54.258 | 52.051
+probabilities:100.000%| 0.000%| 0.000%| 0.000%| 0.000%
 
 predict label: 27    |  11    |  30    |  25    |  21    
 
 Top probability is label 27, which is predicted as:Pedestrians
 --------------------------------------------------------------------------------
 top 5 Softmax Probabilities for test3.jpg:
-probabilities:39.476 | 37.008 | 35.916 | 26.224 | 22.053
+probabilities:89.835%| 7.610%| 2.554%| 0.000%| 0.000%
 
 predict label: 40    |   7    |  12    |   1    |  39    
 
 Top probability is label 40, which is predicted as:Roundabout mandatory
 --------------------------------------------------------------------------------
 top 5 Softmax Probabilities for test4.jpg:
-probabilities:117.771 | 97.103 | 66.227 | 51.615 | 49.600
+probabilities:100.000%| 0.000%| 0.000%| 0.000%| 0.000%
 
 predict label: 11    |  30    |  27    |  37    |  21    
 
 Top probability is label 11, which is predicted as:Right-of-way at the next intersection
 --------------------------------------------------------------------------------
 top 5 Softmax Probabilities for test5.jpg:
-probabilities:225.522 | 113.338 | 108.304 | 107.948 | 105.992
+probabilities:100.000%| 0.000%| 0.000%| 0.000%| 0.000%
 
-predict label: 25    |  20    |  28    |  18    |  22    
+predict label: 25    |   0    |   1    |   2    |   3    
 
 Top probability is label 25, which is predicted as:Road work
 --------------------------------------------------------------------------------
 top 5 Softmax Probabilities for test6.jpg:
-probabilities:235.531 | 115.659 | 107.046 | 106.958 | 99.750
+probabilities:100.000%| 0.000%| 0.000%| 0.000%| 0.000%
 
-predict label: 38    |  34    |  12    |  13    |  10    
+predict label: 38    |   0    |   1    |   2    |   3    
 
 Top probability is label 38, which is predicted as:Keep right
 --------------------------------------------------------------------------------
 top 5 Softmax Probabilities for test7.jpg:
-probabilities:110.727 | 77.177 | 68.362 | 66.750 | 51.072
+probabilities:100.000%| 0.000%| 0.000%| 0.000%| 0.000%
 
 predict label: 17    |  38    |  12    |  39    |  34    
 
 Top probability is label 17, which is predicted as:No entry
 --------------------------------------------------------------------------------
 top 5 Softmax Probabilities for test8.jpg:
-probabilities:43.625 | 39.750 | 32.196 | 32.076 | 28.563
+probabilities:97.964%| 2.034%| 0.001%| 0.001%| 0.000%
 
 predict label: 18    |  26    |  27    |  24    |  25    
 
 Top probability is label 18, which is predicted as:General caution
 --------------------------------------------------------------------------------
 ```
-It seems that model is very certain about image number 1,2,4,5,6,7, but is not very certain about image 3 and 8.<br>
+It seems that model is 100% certain about image number 1,2,4,5,6,7, but is not 100% certain about image 3 and 8.<br>
 Let's visualize what it is confused with for test3.jpg:<br>
 
- ![confused_image_1.jpg](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/confused_image_1.jpg)
+ ![confused_image_1.jpg](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/confused_image_1.jpg)<br>
  
-Well, I think I don't understand why model is confused about these two images... But the model has its reason. <br>
 For test8.jpg, here is the visulization of the confused image:
  ![confused_image_2.jpg](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/confused_image_2.jpg)
  
-For test8.jpg, this is understandable. The confused labe image looks really similar to the true lable image. It's hard even for human beings.<br>
+The confused labe image looks really similar to the true lable image. <br>
 ### Compare the performance on the new images to the accuracy results of the test set.
 For the test set we have 95.7% accuracy, while for new images we have 100% accuracy.<br>
 This comparison is actually not fare because we have too little amount of images for the new images.<br>
