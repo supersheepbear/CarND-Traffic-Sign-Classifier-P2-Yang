@@ -8,8 +8,8 @@ In this project, I used deep neural networks and convolutional neural networks t
 
 # 1. Dataset Summary
 ## 1.1 train,validation,test set distribution
-We have 67% of training set, 9% of validation set and 24% of test set, as summarized below.
-As the dataset is large, we don't need too much validation set. Otherwise, more validation set shall be needed to prevent overfitting.
+For the base training set provided by the website, it has 67% of training set, 9% of validation set and 24% of test set, as summarized below.
+As the dataset is large, I don't need too much validation set. Otherwise, more validation set shall be needed to prevent overfitting.
 ```
 Number of training examples = 34799
 Number of validation examples = 4410
@@ -21,11 +21,11 @@ training set: validation set: testing set = 0.67 : 0.09 : 0.24
 
 ![data_ratio](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/data_ratio.jpg)
 ## 1.2 unique label data distribution
-Here I plot the data number versus unique label for each dataset. 
-This is important because we want the train, validation and test sets to have similar distribution from all different unique labels.<br>
-Otherwise, if data distrubutions are very different for these data set, it will  either affect the training performance or the test performance.
+Here I plot the data amount versus unique label for each dataset. 
+This is important because  the train, validation and test sets shall have similar distribution from all different unique labels.<br>
+Otherwise, if data distrubutions are heavily different for these data set, it will either affect the training performance or the test performance.
 ![unique_label_distribution](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/unique_label_distribution.jpg)
-As shown above, our data set have similar distributions for unique labels, which is good.
+As shown above, the original data set has similar distributions for unique labels.
 
 ## 1.3 examples of stop signs data
 Below are random examples from each unique label stop sign data.
@@ -74,9 +74,9 @@ seq = iaa.Sequential([
     )
 ], random_order=True) # apply augmenters in random order
 ```
-In the 1st attemp, I use above function to randomly augment images<br>
-It applies crops and affine transformations to images, flips some of the images horizontally, adds a bit of noise and blur and also changes the contrast as well as brightness.<br>
-Through this process we now have 10 times more images for our traning set, which is a huge addition
+In the 1st attemp of augmentation, I use above function to randomly augment images<br>
+It crops and affines transformations to images, flips some of the images horizontally, adds a bit of noise and blur and also changes the contrast as well as brightness.<br>
+Through this process I have 10 times more images for my traning set, which is a huge addition.
 >**Note: this data set is not used for final model, because after testing, I found that I have added too much noise to the training set, which leads to degregation of of model performance**
 
 examples of 1st attemp augmentation images:
@@ -84,14 +84,14 @@ examples of 1st attemp augmentation images:
 
 ## 1.5 Image augmentation 2nd attempt(light augmentation)
 **This is the second attemp of my image augmentation(This augmentation data set is used for final model)**<br>
-From the 1st attemp I found that I should not add too much noise on images. The reason is that the augmented images may be impossible for machine or human beings to interpret after heavy agumentation.
-So in the 2nd try of augmentation, I use less heavy augmentation techniques to get a reasonable traning set. This ends up getting better perfomance in my final model.
+From the 1st attemp I found that I should not add too much noise on images. The reason is that the augmented images may be impossible for machine or human beings to interpret after heavy augmentation.
+In the 2nd try of augmentation, I use less heavy augmentation techniques to get a reasonable traning set. This ends up getting better perfomance in my final model.
 Below is the list of augmentations.
 
 - make images brighter or darker
 - Apply affine transformations to each image(Scale/zoom them, translate/move them, rotate them and shear them)
 
-Now process original training images and save to a local file train_aug_adjust.p<br>
+The original training images are saved to a local file train_aug_adjust.p<br>
 The new training set is 5 times larger than the original training set.
 Here are examples of 2st attemp augmentation images. We can see that it is not heavy augmentation like the 1st attempt
 
@@ -106,7 +106,7 @@ Image data shape = (32, 32, 3)
 Number of classes = 43
 aug training set: validation set: testing set = 0.92 : 0.02 : 0.06
 ```
-Now the data set ratio is as below. We have much more training set than the original one. The new training set is store as train_aug.p<br>
+Now the data set ratio is as shown below. I have much more training set than the original provided data set. The new training set is store as train_aug.p<br>
 ![augmentation_2nd_samples](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/data_ratio_augment.jpg)
 
 # 2. Design and Test a Model Architecture
@@ -148,7 +148,7 @@ For the inception layer, here is the achitecture:
 
 ## 3.2 Model development
 ### 3.2.1 Baseline training
-I start with a baseline training with final training accuracy 0.99 and final validation accuracy 0.92.<br>
+I start with a baseline training with final training accuracy 0.99 and final validation accuracy 0.92. This is using the hyberparameters from Lenet lab homrwork. The performance of the baseline training is treated as the **baseline** of my model developement. **Any later expriment model perfomance is compared to this baseline performance**<br>
 For this baseline training I use:
 - batchsize : 64
 - learningrate: 0.001
@@ -213,28 +213,28 @@ Here what I try is using momentum optimizer with rate decay, instead of Adam, to
 
 These are more like experiments of my personal interetes. They do not contribute to my final model, So I don't show them here. <br>If you are interested to see these results, please look into the hyper_para_testing folder for the results.<br>
 Basically, constrained softmax loss layer is from someone's paper to say that it has regularization effect.<br>
-Monte carlo simulation is to try randomly picking hyperparameters to get possible nice parameters.
+Monte carlo simulation is to try randomly picking hyperparameters to get possible optimized parameters.
 ###  3.2.7 inception layer experiment
 Inception layer is a Google developed layer which helps model performance and converging.<br>
 Here I use some hyperparameters from monte carlo simulation and try inception layer on Lenet. <br>
-We can see that the for my current data set and model it does not do anything. I think for more complex model or data set, it will work.
+We can see that the for my current data set and model it does not do anything. I think for more complex model or data set, it can enhance the intepretation of my model, and helps increasing the performance. Actually I already found it useful in my later experiment with augmented data set.
  ![inception_sample.PNG](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/inception_sample.PNG)
 ### 3.2.8 Data augmentation experiment
 From above I have achieved 96% accuracy for validation set. but it's still overfitting!<br>
 So I decide to try the data augmentation technique.<br>
 As stated in section 2, I have try two different augmentation data set.<br>
-The 1st augmentation training set is a heavy augmentation data set, which is very noisy.<br>
+The 1st augmented training set is a heavily augmented data set, which is very noisy.<br>
 I end up not able to get better training accuracy or validation accuracy more than 94%.<br>
-As a result, I use the 2nd augmentation training set. My final model with this augmentation training set gets very good result as shown in next section 3.3
+As a result, I choose to make the 2nd augmentation training set. My final model with this augmentation training set gets very good result as shown in next section 3.3
 
 ## 3.3 Final model
-**For final model I have achived 98.3% accuracy for training set, and 98.0% for validation set**<br>
+**For final model I have achived 98.4% accuracy for training set, and 98.3% for validation set**<br>
 Note that for final model I used the inception layer, because it significantly increases my training speed, and does not seem to hurt my performance.<br>
-For final model I use, below are the details and hyperparameters used for the model:
+For final model I use, below are details and hyperparameters used for the model:
 
 ### Hyper parameters
 - dropout keepprob : 0.5
->*The dropout keepprob is tuned to be 0.5 to get reasonably good regularization on data*
+>*The dropout keepprob is tuned to be 0.5 to get reasonably good regularization on my model*
 - initial rate: 0.035
 - rate decay: 0.88 (rate  = 0.88 * rate for each EPOCH)
 
@@ -254,11 +254,11 @@ example for rate logic:
         elif train_accuracy>0.985 and train_accuracy<0.987 and rate<0.0004:
             n_rate = 0.0008
 ```
-These rate conditions are set based on fine tuning them on the augmentation training set, to successfully converge to a good optimal point. The augmentation training set is harder than the original training set to be trained on. When I tried fixing rate or just simple rate decay, the model seems to easily stuck on local optimal point. Through these conditions I am getting very good accuracy.*
+*These rate conditions are set based on fine tuning them on the augmented training set, to help model successfully converges to a good optimal point. The augmentation training set is harder than the original training set to be trained on. When I tried fixing rate or just simple rate decay, the model seems to easily stuck on local optimal point. Through these conditions I am getting very good accuracy.*
 - batch size: 512 for the 1st part ot training, and 4096 for the 2nd part ot training.
->*I choose this batch size because my 1080ti is able to handle this amount of memory, and the model converges fast enough and to a reasonable point.*
+>*I choose these batch size because my 1080ti is able to handle this amount of memory, and the model converges fast enough and to a reasonable point.*
 - EPOCHS: 210 EPOCHS
->*The training accuracy seems hard to grow after this EPOCHS. I think is a reasonable eraly stop point to prevent overfitting*
+>*The training accuracy seems hard to grow after this EPOCHS. I think is a reasonable early stop point to prevent overfitting*
 - L2 norm: not used
 >*I got good regularization from dropout so I don't bother L2 norm*
 - momentum factor:0.9
@@ -270,7 +270,7 @@ In this first part of training, I use the hyper parameters as shown above, and l
 
 ### Final model training 2nd part. 
 Since I doubt that the model performance can be improved futherly, I decided to train more epochs to get better final performance.<br>
-What I do is that I load the model just trained on, and train some more EPOCHS, and let the model stop at training accuracy> 98.4% and validation accuracy > 98.3%. This end out using another 98 EPOCHs for the training.<br>
+What I do is that I load the model just trained on, and train some more EPOCHS, and let the model stop at training accuracy > 98.4% and validation accuracy > 98.3%. This end out using another 98 EPOCHs for the training.<br>
 I this period, I set tighter learning rate and batch size 4096 for a better converging effect. <br>
 The final model performance is shown in the following figure.
 The final model is saved to '.\lenet_final'
@@ -278,11 +278,11 @@ The final model is saved to '.\lenet_final'
  ![final_model.jpg](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/final_model.jpg)
 Here are some of my answers for the questions:<br>
 **What architecture was chosen?**<br>
-Lenet 5 with an incetion layer. <br>
+Lenet 5 with an inception layer. <br>
 **Why did you believe it would be relevant to the traffic sign application?**<br>
-Because it has good effect on the classification for numbers, I believe it shall has similar performance for stop signs, since they are both multiclass classification problem.<br>
+Because it has amazing performance on the classification for numbers, I believe it shall have similar performance for stop signs, since they are both multiclass classification problem.<br>
 **How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?**<br>
-The training, validation of more than 98% indicates that the model works well on th training part, and it's not overfitting/underfitting. The 95.7% one test set shows that it works well on out of sample prediction. However, further improvement can be included to get it better. 
+The training accuracy of 98.4%, and validation accuracy of 98.3% indicate that the model works well on th training part, and it's not overfitting/underfitting. The 95.7% one test set shows that it works well on out of sample prediction. However, further improvement can be included to make it better. 
 ## 3.4  evaluation of the test set
 Our model accuracy on the test set is 95.7%.
 Futher improvement can be made by:
@@ -290,7 +290,7 @@ Futher improvement can be made by:
 - improve model achitecture
 - better tuning hyperparameters
 - better training process<br>
-**Below are the precision and recall for the model, which may give us infomation about which label performance needs to improve for my model.**
+**Below are the precision and recall for the model, which can give me information about which label performance needs to improve for my future model.**
 ```
 
 
@@ -341,11 +341,11 @@ label43  recall:0.8889 precision:0.9877
 
 # 4. Test a Model on New Images
 
-I have download at 8 pictures of German traffic signs from the web and use my model to predict the traffic sign type.<br>
-Below are the images after resize.
+I have downloaded 8 pictures of German traffic signs from web and use my model to predict the traffic sign type.<br>
+Below are the images after resizing.
 ![web_test_images.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/web_test_images.png)
 
-Then I predict  the sign type for each image:<br>
+Below are traffic sign type predictions for each image:<br>
 ```
 label value for test1.jpg: 1, predict value for test1.jpg: 1
 
@@ -364,8 +364,8 @@ label value for test7.jpg: 17, predict value for test7.jpg: 17
 label value for test8.jpg: 18, predict value for test8.jpg: 18
 ```
 
-As you can see, for 8 web images, our model accuracy is 100%.Cool! Awesome!<br>
-the images I choose is not hard for model (and for human beings) to classify.  I guess it will be hard if I pick some images that are harder to classify.<br>
+As you can see, for 8 web images, my model accuracy is 100%. Cool! Awesome!<br>
+the images I chose is not hard actuallt for my model (and for human beings) to classify.  I guess it will be harder if I pick some images that are harder to be classified.<br>
 
 Here I output top 5 softmax probabilities for each image found on the web:
 ```
@@ -427,7 +427,7 @@ Top probability is label 18, which is predicted as:General caution
 --------------------------------------------------------------------------------
 ```
 It seems that model is 100% certain about image number 1,2,4,5,6,7, but is not 100% certain about image 3 and 8.<br>
-Let's visualize what it is confused with for test3.jpg:<br>
+Let's visualize what the model is confused with for test3.jpg:<br>
 
  ![confused_image_1.jpg](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/confused_image_1.jpg)<br>
  
@@ -436,9 +436,9 @@ For test8.jpg, here is the visulization of the confused image:
  
 The confused labe image looks really similar to the true lable image. <br>
 ### Compare the performance on the new images to the accuracy results of the test set.
-For the test set we have 95.7% accuracy, while for new images we have 100% accuracy.<br>
-This comparison is actually not fare because we have too little amount of images for the new images.<br>
-I think if I increase the number of new images, the comparison will make more sense.
+For the test set the model has 95.7% accuracy, while for new images it has 100% accuracy.<br>
+This comparison is actually not fare because I have too little amount of images for the new images data set.<br>
+If I increase the number of new images, the comparison will make more sense.
 
 
 # 4. Visualize the Neural Network's State with Test Images:
@@ -448,13 +448,13 @@ Take an example of the following input image:
  Below are some visulizations of the layers output:<br>
  conv1:<br>
   ![conv1.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/conv1.png)<br>
- conv1_act:<br>
+ conv1 activation:<br>
   ![conv1_act.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/conv1_act.png)<br>
- conv1_pool:<br>
+ conv1 maxpool:<br>
   ![conv1_act_pool.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/conv1_act_pool.png)<br>
  conv2:<br>
   ![conv2.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/conv2.png)<br>
- conv2_act:<br>
+ conv2 activation:<br>
   ![conv2_act.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/conv2_act.png)<br>
  inception:<br>
   ![inception_visual.png](https://github.com/supersheepbear/CarND-Traffic-Sign-Classifier-P2-Yang/raw/master/report_images/inception_visual.png)<br>
